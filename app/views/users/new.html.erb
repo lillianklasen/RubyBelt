@@ -1,0 +1,37 @@
+<h1>Welcome!</h1>
+<br>
+<br>
+<h2>Register</h2>
+<form action='/register' method='post'>
+    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+    Name: <input type='text' name='user[name]'>
+    <br>
+    <br>
+    Alias: <input type='text' name='user[alias]'>
+    <br>
+    <br>
+    Email: <input type='text' name='user[email]'>
+    <br>
+    <br>
+    Password: <input type='password' name='user[password]'>
+    <br>
+    <br>
+    Confirm PW: <input type='password' name='user[password_confirmation]'>
+    <br>
+    <br>
+    <input type='submit' value='Register'>
+</form>
+<br>
+<br>
+
+<h2>Log In</h2>
+<form action='/login' method='post'>
+    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+    Email: <input type='text' name='email'>
+    <br>
+    <br>
+    Password: <input type='password' name='password'>
+    <br>
+    <br>
+    <input type='submit' value='Log In'>
+</form>
